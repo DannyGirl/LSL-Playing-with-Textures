@@ -1,0 +1,41 @@
+default
+{
+    state_entry()
+    {
+        llSetText("Playing with Textures", <1, 1, 1>, 1);
+    }
+    
+    touch_end (integer num)
+    {
+        llWhisper(0, "Offsetting texture...");
+        llOffsetTexture(0.5, 0.5, 1);
+        llSleep(2.0);
+        llOffsetTexture(0, 0, 1);
+        llSleep(1.0);
+        
+        llWhisper(0, "Scaling texture...");
+        llScaleTexture(5, 5, 1);
+        llSleep(2.0);
+        llScaleTexture(1, 1, 1);
+        llSleep(1.0);
+        
+        llWhisper(0, "Rotating texture...");
+        llRotateTexture(0, 1);
+        llSleep(1.0);
+        llRotateTexture(1.570844, 1);
+        llSleep(1.0);
+        llRotateTexture(3.141689, 1);
+        llSleep(1.0);
+        llRotateTexture(4.712341, 1);
+        llSleep(1.0);
+        
+        llWhisper(0, "Changing texture...");
+        llSetTexture("black marble", 1);
+        llSleep(2.0);
+        llSetTexture("grid", 1);
+        llSleep(1.0);
+        
+        llResetScript();
+    }
+}
+       
